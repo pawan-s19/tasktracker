@@ -18,6 +18,7 @@ import {
 } from "../../constants/taskConstants";
 import { useState } from "react";
 import { GlobalState } from "../../contexts/context";
+import { toast } from "react-toastify";
 
 function Filters() {
   const { dispatch } = GlobalState();
@@ -46,6 +47,8 @@ function Filters() {
       type: FILTER_TASKS,
       payload,
     });
+
+    return toast.success("Filters applied successfully");
   };
   return (
     <form onSubmit={applyFilters} className="flex max-w-md flex-col gap-4">
