@@ -23,7 +23,6 @@ function PopUP({ showPopup, setShowPopup, taskDets }) {
 
   return (
     <>
-      <Button onClick={() => setShowPopup(true)}>Toggle modal</Button>
       <Modal
         show={showPopup}
         size="md"
